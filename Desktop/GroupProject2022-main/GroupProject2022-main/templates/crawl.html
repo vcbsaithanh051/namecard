@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="form-container">
+    <h1 id="title-header">WELCOME TO CRAWLED</h1>
+    <div class="form-header">
+</div>
+
+<form class='form-items' action="/crawl" method="post">
+    <input class="form-input" type="text" autofocus autocomplete="off" name="url" placeholder="Enter your website and/or domain" ><br />
+    <div>
+        {{error}}
+    </div>
+    <div>
+        <input type="radio" name="crawl-type" value="text">
+        <label for="text">Text</label>
+        <input type="radio" name="crawl-type" value="photo">
+        <label for="photo">Photo</label>
+    </div>
+    <input class="form-submit" type="submit" value="Go">
+</form>
+
+<div>
+    {{test}}
+</div>
+
+<div class="link-items
+">
+<a class="link-item" href="/logout">Log Out</a>
+</div>
+</div>
+{% endblock %}
